@@ -1,5 +1,4 @@
 import XCTest
-import SimpleCardView-SwiftUI
 
 class Tests: XCTestCase {
     

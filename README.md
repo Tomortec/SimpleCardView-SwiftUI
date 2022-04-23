@@ -5,11 +5,59 @@
 [![License](https://img.shields.io/cocoapods/l/SimpleCardView-SwiftUI.svg?style=flat)](https://cocoapods.org/pods/SimpleCardView-SwiftUI)
 [![Platform](https://img.shields.io/cocoapods/p/SimpleCardView-SwiftUI.svg?style=flat)](https://cocoapods.org/pods/SimpleCardView-SwiftUI)
 
+`SimpleCardView-SwiftUI` is a very simple card view written with SwiftUI
+
+![ScreenShot](./screenshot.png)
+
 ## Example
+
+``` Swift
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        HStack(spacing: 20.0) {
+            CardView(
+            size: CGSize(width: 150.0, height: 200.0), 
+            title: "Hello world", 
+            backgroundColorTop: .blue, 
+            backgroundColorBottom: .cyan, 
+            cover: {
+                Image(systemName: "heart.fill")
+                    .resizable()
+                    .frame(width: 120, height: 120)
+            }, detail: {
+                Image(systemName: "star.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                    .foregroundColor(.yellow)
+            })
+            
+            CardView(
+            size: CGSize(width: 150.0, height: 200.0), 
+            title: "Hello world", 
+            backgroundColorTop: .blue, 
+            backgroundColorBottom: .cyan, 
+            cover: {
+                Image(systemName: "gearshape.fill")
+                    .resizable()
+                    .frame(width: 120, height: 120)
+            }, detail: {
+                Image(systemName: "moon.stars.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                    .foregroundColor(.yellow)
+            })
+        }
+    }
+}
+```
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+Swift >= 5.0
 
 ## Installation
 
@@ -22,7 +70,7 @@ pod 'SimpleCardView-SwiftUI'
 
 ## Author
 
-36720212, everything@tomortec.com
+Tomortec, everything@tomortec.com
 
 ## License
 

@@ -1,0 +1,6 @@
+framework module Pods_SimpleCardView_SwiftUI_Example {
+  umbrella header "Pods-SimpleCardView-SwiftUI_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

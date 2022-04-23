@@ -1,0 +1,16 @@
+PODS:
+  - SimpleCardView-SwiftUI (0.1.0)
+
+DEPENDENCIES:
+  - SimpleCardView-SwiftUI (from `../`)
+
+EXTERNAL SOURCES:
+  SimpleCardView-SwiftUI:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SimpleCardView-SwiftUI: 458a0ffda8ff129f6cca925b67a620e854800aa2
+
+PODFILE CHECKSUM: 734a16e084b296ceb52dbc3101dc174abab07be9
+
+COCOAPODS: 1.11.0

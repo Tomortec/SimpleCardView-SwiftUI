@@ -1,0 +1,6 @@
+framework module SimpleCardView_SwiftUI {
+  umbrella header "SimpleCardView-SwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
