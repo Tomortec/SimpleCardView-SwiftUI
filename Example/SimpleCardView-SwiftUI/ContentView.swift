@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SimpleCardView_SwiftUI
 
 struct ContentView: View {
     var body: some View {

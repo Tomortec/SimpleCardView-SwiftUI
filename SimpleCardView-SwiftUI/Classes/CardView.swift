@@ -23,7 +23,7 @@ public struct CardView<Cover: View, Detail: View>: View {
     
     @State var isShowingDetailsView = false
     
-    init(
+    public init(
         size: CGSize,
         title: String,
         proportion: CGFloat = 1 / 4,

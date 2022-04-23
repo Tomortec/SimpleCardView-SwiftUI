@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleCardView-SwiftUI'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'SimpleCardView-SwiftUI is a very simple card view written with SwiftUI'
 
 # This description is used to generate tags and improve search results.
