@@ -53,6 +53,7 @@ init(
     titleViewProportion: CGFloat = 1 / 4, // TitleView 的高占 卡片的高 的比例
     spacing: CGFloat = 0.0, 
     detailViewType: CardDetailsViewType = .sheet, // DetailView 展示的样式
+    detailViewBinding: Binding<Bool>? = nil, // 添加一个 `Binding` 来控制 DetailView 的可见性
     cover: () -> Cover, 
     detail: () -> Detail, 
     onTap action: (() -> ())? = nil

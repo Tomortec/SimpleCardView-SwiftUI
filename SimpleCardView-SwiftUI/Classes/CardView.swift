@@ -72,6 +72,14 @@ public struct CardView<Cover: View, Detail: View>: View {
     @State var isShowingDetailsViewAsFullScreen = false
     @State var isShowingDetailsViewAsPopover = false
     @State var isShowingDetailsViewAsSheet = false
+    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    // |||||||||||||||||||||||||||||||||||||||||||||||||
+    // this two pile of codes need to be optimized later
+    // |||||||||||||||||||||||||||||||||||||||||||||||||
+    // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    var detailsViewBindingForFullScreen: Binding<Bool>?
+    var detailsViewBindingForPopover: Binding<Bool>?
+    var detailsViewBindingForSheet: Binding<Bool>?
     
     /* MARK: - Requirements */
     
@@ -84,10 +92,12 @@ public struct CardView<Cover: View, Detail: View>: View {
         - titleViewProportion: determines the proportion (of height) of the title view. For example, if this parameters is set to `1 / 4`, the title view's height will be 1/4 of that of the card's while the cover view will be 3/4. Default is `1 / 4`
         - spacing: the space between the title view and the cover view. Default is `0.0`
         - detailViewType: determines how the detail view will display. Possible values include `.fullScreen`, `.sheet` and `.popover()`. Default is `.sheet`
+        - detailViewBinding: this parameter enables you to add a `Bool` binding for `DetailView` to control the visibility of the DetailsView from the outside(even in the `DetailView`, therefore, this is the solution to creating a `close button` in the `DetailView`). Note that once you set this parameter, the tapping action on the card view will NOT show the detail view, however, you can modify you binding in the `onTap` closure to find it back. Default is `nil`
         - cover: the cover view. Required
         - detail: the view displaying after the card is tapped. Required
         - onTap: the action to do when the card is tapped. Default is `nil`
      
+     - important: once `detailViewBinding` parameter is set, the DetailView will NOT be shown when the card is tapped. However, you can modify your binding in the `onTap` closure. Our `complete example` demonstrate this.
      - note: `title` parameter makes no sense when `.replaceTitleView(with:)` is called
      - note: the `.popover()` type of `detailViewType` will display as `.sheet` on iPhone.
      */
@@ -97,6 +107,7 @@ public struct CardView<Cover: View, Detail: View>: View {
         titleViewProportion: CGFloat = 1 / 4,
         spacing: CGFloat = 0.0,
         detailViewType: CardDetailsViewType = .sheet,
+        detailViewBinding: Binding<Bool>? = nil,
         
         @ViewBuilder cover: () -> Cover,
         @ViewBuilder detail: () -> Detail,
@@ -110,9 +121,18 @@ public struct CardView<Cover: View, Detail: View>: View {
         self.titleView = CardTitleView(title: title)
         self.backgroundView = CardBackgroundView(backgroundColor: .blue)
         
-        self.cover = cover()
+        self.cover  = cover()
         self.detail = detail()
         self.action = action
+        
+        switch detailViewType {
+        case .fullScreen:
+            self.detailsViewBindingForFullScreen = detailViewBinding
+        case .popover(_, _):
+            self.detailsViewBindingForPopover = detailViewBinding
+        case .sheet:
+            self.detailsViewBindingForSheet = detailViewBinding
+        }
     }
     
     public var body: some View {
@@ -127,18 +147,18 @@ public struct CardView<Cover: View, Detail: View>: View {
         .background(
             backgroundView
         )
-        .fullScreenCover(isPresented: $isShowingDetailsViewAsFullScreen) {
-            CardDetailsView(displayType: detailViewType, flag: $isShowingDetailsViewAsFullScreen) {
+        .fullScreenCover(isPresented: detailsViewBindingForFullScreen ?? $isShowingDetailsViewAsFullScreen) {
+            CardDetailsView(displayType: detailViewType, flag: detailsViewBindingForFullScreen ?? $isShowingDetailsViewAsFullScreen) {
                 detail
             }
         }
-        .sheet(isPresented: $isShowingDetailsViewAsPopover) {
-            CardDetailsView(displayType: detailViewType, flag: $isShowingDetailsViewAsPopover) {
+        .popover(isPresented: detailsViewBindingForPopover ?? $isShowingDetailsViewAsPopover) {
+            CardDetailsView(displayType: detailViewType, flag: detailsViewBindingForPopover ?? $isShowingDetailsViewAsPopover) {
                 detail
             }
         }
-        .popover(isPresented: $isShowingDetailsViewAsSheet) {
-            CardDetailsView(displayType: detailViewType, flag: $isShowingDetailsViewAsSheet) {
+        .sheet(isPresented: detailsViewBindingForSheet ?? $isShowingDetailsViewAsSheet) {
+            CardDetailsView(displayType: detailViewType, flag: detailsViewBindingForSheet ?? $isShowingDetailsViewAsSheet) {
                 detail
             }
         }

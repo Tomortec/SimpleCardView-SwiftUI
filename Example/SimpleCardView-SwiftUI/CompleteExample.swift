@@ -10,8 +10,15 @@ import SwiftUI
 import SimpleCardView_SwiftUI
 
 struct CompleteExample: View {
+    // control the visibility of detail view outside
+    @State var isShowingTheSecondCardView: Bool = false
+    
     var body: some View {
         VStack(spacing: 20.0) {
+            Button("Show detail for the seconde card") {
+                isShowingTheSecondCardView = true
+            }
+            
             HStack(spacing: 20.0) {
                 // keep it simple
                 CardView(
@@ -44,7 +51,8 @@ struct CompleteExample: View {
                     title: "Constraints",
                     titleViewProportion: 1 / 3, // the title view takes up 1 / 3 's place and the cover takes up 2 / 3
                     spacing: 0.0,
-                    detailViewType: .sheet,
+                    detailViewType: .fullScreen,
+                    detailViewBinding: $isShowingTheSecondCardView,
                     cover: {
                         Image(systemName: "heart.fill")
                             .resizable()
@@ -52,15 +60,25 @@ struct CompleteExample: View {
                             .frame(width: 100.0, height: 100.0)
                     },
                     detail: {
-                        Image(systemName: "moon.stars.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .padding()
-                            .foregroundColor(.yellow)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(.cyan)
+                        VStack(spacing: 50.0) {
+                            // you may find it a good way to create a close button for detail view like this
+                            Button("Hide") {
+                                isShowingTheSecondCardView = false
+                            }
+                            .font(.title)
+                            .foregroundColor(.white)
+                            
+                            Image(systemName: "moon.stars.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .padding()
+                                .foregroundColor(.yellow)
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.cyan)
                     },
                     onTap: {
+                        isShowingTheSecondCardView = true
                         print("!!! CardView on tapped !!!")
                     })
             }

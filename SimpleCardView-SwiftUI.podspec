@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleCardView-SwiftUI'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'SimpleCardView-SwiftUI is a very simple card view written with SwiftUI'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   You can also use SwiftUI to create a detail view for the card.
                        DESC
 
-  s.homepage         = 'https://tomortec.com'
+  s.homepage         = 'https://github.com/Tomortec/SimpleCardView-SwiftUI'
   s.screenshots      = './screenshot.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Tomortec' => 'everything@tomortec.com' }

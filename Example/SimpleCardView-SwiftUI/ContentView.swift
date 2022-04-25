@@ -16,14 +16,14 @@ struct ContentView: View {
         case complete
     }
     
-    @State var demoType: DemoType = .simple
+    @State var demoType: DemoType = .complete
     
     var body: some View {
         VStack {
-//            Button("Switch demo type") {
-//                demoType = demoType == .complete ? .simple : .complete
-//            }
-//            .padding(.vertical, 50)
+            Button("Switch demo type") {
+                demoType = demoType == .complete ? .simple : .complete
+            }
+            .padding(.vertical, 50)
             
             switch demoType {
             case .simple:

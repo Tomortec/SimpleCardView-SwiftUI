@@ -52,9 +52,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 init(
     size: CGSize, 
     title: String, 
-    titleViewProportion: CGFloat = 1 / 4, // the proportion (of height) of the title view
+    titleViewProportion: CGFloat = 1 / 4, // the proportion (of height) of the TitleView
     spacing: CGFloat = 0.0, 
-    detailViewType: CardDetailsViewType = .sheet, // how the detail view will display
+    detailViewType: CardDetailsViewType = .sheet, // how the DetailView will display
+    detailViewBinding: Binding<Bool>? = nil, // add a binding to control the visibility of the DetailView
     cover: () -> Cover, 
     detail: () -> Detail, 
     onTap action: (() -> ())? = nil
