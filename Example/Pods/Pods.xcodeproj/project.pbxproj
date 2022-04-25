@@ -7,29 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41B1AE79E93C8EB87331BCD625473032 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7C7CBF4366B196F4F8B133C8319AB1 /* Foundation.framework */; };
-		613D421349DF2BFFA3B063940383C84C /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB932B860DD2D64BE779E4267E7E0708 /* CardDetailsView.swift */; };
-		7C4D0F78D618AF130B4FD37F3551818D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20094AF9A05B5AFEE065EFE5403128D1 /* SwiftUI.framework */; };
+		048AEAF1F1E6E7359DD15586601E5881 /* SimpleCardView-SwiftUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 722A9E92A11FC18A98456F5FDDBDD051 /* SimpleCardView-SwiftUI-dummy.m */; };
+		06C890A7EAB7BBC9C500CC253EA87246 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502C5F8C278222F0F95CA1057FE5B36 /* CardDetailsView.swift */; };
+		496EF7ED333C4D1799B891C7DCB7D134 /* CardBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7990FDDF9E8D745AC34E1BFBA8272 /* CardBackgroundView.swift */; };
+		609D7F0ED344A24C57FF3BF15BBB451E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7C7CBF4366B196F4F8B133C8319AB1 /* Foundation.framework */; };
+		908AF4D88F94097C195EC28516913A38 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B9F20350F2FF59454D6739BB3C4C1 /* CardView.swift */; };
 		97AF78C3D52BD07389096614F04C8A18 /* Pods-SimpleCardView-SwiftUI_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C06F8B2E42301AC2FD1346891BDE3C1D /* Pods-SimpleCardView-SwiftUI_Example-dummy.m */; };
 		9FB3F605809651F7696B82F6D935BDCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7C7CBF4366B196F4F8B133C8319AB1 /* Foundation.framework */; };
-		B9D0E6FC3CF8C23AB5E3026187CD1B10 /* SimpleCardView-SwiftUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5456AA8DF1FDD1B38AE3CAB8EAFD0B8C /* SimpleCardView-SwiftUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC73A8D702BE6AD341626D3E5000FB1C /* SimpleCardView-SwiftUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6CCC8B5F2D158C1D8A684E963DC663 /* SimpleCardView-SwiftUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3DFB79652EA1642485C063AA0C49346 /* Pods-SimpleCardView-SwiftUI_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F27643838BA4DD8B508204FF08B758F /* Pods-SimpleCardView-SwiftUI_Tests-dummy.m */; };
-		D94C1442A962EC324D4F5764DA1B3456 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEBBEF7A3FD0324F66FC98D8E574383 /* CardView.swift */; };
-		DD167F61017A0614F65DF1E8ABAFFB4C /* SimpleCardView-SwiftUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C63828A7A7950BD667C4492B83732D /* SimpleCardView-SwiftUI-dummy.m */; };
+		C8B4B631021B0CFCE8B66E11C9B7B2B7 /* CardTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F78D2161AAE9ACA62AA65852B1911D3 /* CardTitleView.swift */; };
+		CE4851D1802F3A157B8F461729608C4D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20094AF9A05B5AFEE065EFE5403128D1 /* SwiftUI.framework */; };
 		DE33BAAB678671326F223BBB62DBF0D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7C7CBF4366B196F4F8B133C8319AB1 /* Foundation.framework */; };
 		E233ADD391E6F1EE6877C975F655A0CA /* Pods-SimpleCardView-SwiftUI_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0CF9CC2B7E7CAE0CC7FFB95B4D5D95F /* Pods-SimpleCardView-SwiftUI_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FBC7B5F706E38A5C7C5095AB069B41D6 /* Pods-SimpleCardView-SwiftUI_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC51FCB6F85E8426FD5E01DFCF6587A /* Pods-SimpleCardView-SwiftUI_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6937B1A08A8D6A965B1EDA2F389997A3 /* PBXContainerItemProxy */ = {
+		8B4B9D9CAA7EF915DFF728F08A6F2640 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 02F107C719FC3701D3016D8022DCD296;
 			remoteInfo = "SimpleCardView-SwiftUI";
 		};
-		B0FA4F3BF6A9F7799F9179070DB1062C /* PBXContainerItemProxy */ = {
+		E87F51AC51BE03DF8D451B6AE0A1D6D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -40,40 +42,42 @@
 
 /* Begin PBXFileReference section */
 		09F42D4742385457F2B94679DFCA1D90 /* Pods-SimpleCardView-SwiftUI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleCardView-SwiftUI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0FB818896F2B8C10D05712015E1FF086 /* SimpleCardView-SwiftUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleCardView-SwiftUI-prefix.pch"; sourceTree = "<group>"; };
+		15B7990FDDF9E8D745AC34E1BFBA8272 /* CardBackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardBackgroundView.swift; path = "SimpleCardView-SwiftUI/Classes/CardBackgroundView.swift"; sourceTree = "<group>"; };
+		16D86D59500FC36A231F756A81E54519 /* SimpleCardView-SwiftUI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "SimpleCardView-SwiftUI.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1D00B35BDD66C1DAC20617C691E5C958 /* Pods-SimpleCardView-SwiftUI_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleCardView-SwiftUI_Example.modulemap"; sourceTree = "<group>"; };
+		1D6CCC8B5F2D158C1D8A684E963DC663 /* SimpleCardView-SwiftUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleCardView-SwiftUI-umbrella.h"; sourceTree = "<group>"; };
+		1F78D2161AAE9ACA62AA65852B1911D3 /* CardTitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardTitleView.swift; path = "SimpleCardView-SwiftUI/Classes/CardTitleView.swift"; sourceTree = "<group>"; };
 		20094AF9A05B5AFEE065EFE5403128D1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
-		22C63828A7A7950BD667C4492B83732D /* SimpleCardView-SwiftUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleCardView-SwiftUI-dummy.m"; sourceTree = "<group>"; };
-		27551CBCDC8D2E9062C242C8BA1DBBD0 /* SimpleCardView-SwiftUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SimpleCardView-SwiftUI-Info.plist"; sourceTree = "<group>"; };
 		34F2B37487EC583275A82BD99CEB36FB /* Pods-SimpleCardView-SwiftUI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleCardView-SwiftUI_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		37A74E2B0E454EAC658FA2B73652650A /* SimpleCardView-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SimpleCardView-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		38F7D1BCA6952BAE72C801C2B7CB77CF /* SimpleCardView-SwiftUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SimpleCardView-SwiftUI.modulemap"; sourceTree = "<group>"; };
 		3DC38575D6842F7E623CB3957B7FA561 /* SimpleCardView-SwiftUI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "SimpleCardView-SwiftUI"; path = SimpleCardView_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		419D47F4169ADD021E4DC77D975C4DCB /* Pods-SimpleCardView-SwiftUI_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleCardView-SwiftUI_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		452D919346CE2CD6D05166A19BE370B3 /* SimpleCardView-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SimpleCardView-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		4AD7BE4259B3EDFB3B77FC307BDD3B57 /* SimpleCardView-SwiftUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SimpleCardView-SwiftUI-Info.plist"; sourceTree = "<group>"; };
 		4CA6EEABD855B0F547333087669EC3D4 /* Pods-SimpleCardView-SwiftUI_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleCardView-SwiftUI_Tests.modulemap"; sourceTree = "<group>"; };
 		52CEE31D2B17FB2963BAD0AB5E870C89 /* Pods-SimpleCardView-SwiftUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleCardView-SwiftUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5456AA8DF1FDD1B38AE3CAB8EAFD0B8C /* SimpleCardView-SwiftUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleCardView-SwiftUI-umbrella.h"; sourceTree = "<group>"; };
 		6178FBDC923EF849F803AA08E7FAFA33 /* Pods-SimpleCardView-SwiftUI_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleCardView-SwiftUI_Example-frameworks.sh"; sourceTree = "<group>"; };
+		722A9E92A11FC18A98456F5FDDBDD051 /* SimpleCardView-SwiftUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleCardView-SwiftUI-dummy.m"; sourceTree = "<group>"; };
 		772493916A48B48B29CD95F9F13A00F3 /* Pods-SimpleCardView-SwiftUI_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleCardView-SwiftUI_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7BEBBEF7A3FD0324F66FC98D8E574383 /* CardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "SimpleCardView-SwiftUI/Classes/CardView.swift"; sourceTree = "<group>"; };
 		7D985548592964D8F7DAD370DA951184 /* Pods-SimpleCardView-SwiftUI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleCardView-SwiftUI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		84E6911DF8A96C9B48DC6AF5DE9109C3 /* SimpleCardView-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SimpleCardView-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		93091E6CC68AA187EF05EA8FE47BFB94 /* Pods-SimpleCardView-SwiftUI_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SimpleCardView-SwiftUI_Tests"; path = Pods_SimpleCardView_SwiftUI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B73C0E711FBB74C3827E49F23DA787 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9B5C4882AAF583A161B043ABC60E3EA4 /* SimpleCardView-SwiftUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleCardView-SwiftUI-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F27643838BA4DD8B508204FF08B758F /* Pods-SimpleCardView-SwiftUI_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleCardView-SwiftUI_Tests-dummy.m"; sourceTree = "<group>"; };
-		A3090968EDFAF10B28B0392DA6142821 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		A4FC9968C489FB7C99F07C56F2B88B2B /* Pods-SimpleCardView-SwiftUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleCardView-SwiftUI_Example.release.xcconfig"; sourceTree = "<group>"; };
-		AB932B860DD2D64BE779E4267E7E0708 /* CardDetailsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardDetailsView.swift; path = "SimpleCardView-SwiftUI/Classes/CardDetailsView.swift"; sourceTree = "<group>"; };
-		AC94979E5912F4A9B6E0CACC71CA497C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		ACE743C9A4FE0517483A02D214F213EA /* Pods-SimpleCardView-SwiftUI_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SimpleCardView-SwiftUI_Example"; path = Pods_SimpleCardView_SwiftUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB74EFB06785B3DCC992600A90B90C2E /* SimpleCardView-SwiftUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SimpleCardView-SwiftUI.modulemap"; sourceTree = "<group>"; };
+		BC2B9F20350F2FF59454D6739BB3C4C1 /* CardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "SimpleCardView-SwiftUI/Classes/CardView.swift"; sourceTree = "<group>"; };
 		C06F8B2E42301AC2FD1346891BDE3C1D /* Pods-SimpleCardView-SwiftUI_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleCardView-SwiftUI_Example-dummy.m"; sourceTree = "<group>"; };
+		C4D34E24114315931658FD97409935AB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		C525925A0AD6EB089223A4A7952D853C /* Pods-SimpleCardView-SwiftUI_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleCardView-SwiftUI_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C6FF9A08C466CB4BC8D6E7B04DB8B89D /* SimpleCardView-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SimpleCardView-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		CDC51FCB6F85E8426FD5E01DFCF6587A /* Pods-SimpleCardView-SwiftUI_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleCardView-SwiftUI_Example-umbrella.h"; sourceTree = "<group>"; };
-		D556363ABD1F15917C7F20F0DDE7D5CB /* SimpleCardView-SwiftUI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "SimpleCardView-SwiftUI.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DC7C7CBF4366B196F4F8B133C8319AB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E0CF9CC2B7E7CAE0CC7FFB95B4D5D95F /* Pods-SimpleCardView-SwiftUI_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleCardView-SwiftUI_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E1EB62886849845ABF4DC965D66E229D /* Pods-SimpleCardView-SwiftUI_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleCardView-SwiftUI_Tests-Info.plist"; sourceTree = "<group>"; };
 		F4CB538E9AB908113E9C88B22210C280 /* Pods-SimpleCardView-SwiftUI_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleCardView-SwiftUI_Example-Info.plist"; sourceTree = "<group>"; };
+		F502C5F8C278222F0F95CA1057FE5B36 /* CardDetailsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardDetailsView.swift; path = "SimpleCardView-SwiftUI/Classes/CardDetailsView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +89,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FC315781F7BA1064AC91CE16A63FE0E /* Frameworks */ = {
+		9B56A24B7681B65901ACB73B03529525 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41B1AE79E93C8EB87331BCD625473032 /* Foundation.framework in Frameworks */,
-				7C4D0F78D618AF130B4FD37F3551818D /* SwiftUI.framework in Frameworks */,
+				609D7F0ED344A24C57FF3BF15BBB451E /* Foundation.framework in Frameworks */,
+				CE4851D1802F3A157B8F461729608C4D /* SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,12 +135,43 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		460137630D1C3B999DB0B52792BD403E /* Development Pods */ = {
+		3FDA1421230557C16806E7BE652B5230 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				8DE094DEB281605CD32D570C65BC2E89 /* SimpleCardView-SwiftUI */,
+				96B73C0E711FBB74C3827E49F23DA787 /* LICENSE */,
+				C4D34E24114315931658FD97409935AB /* README.md */,
+				16D86D59500FC36A231F756A81E54519 /* SimpleCardView-SwiftUI.podspec */,
 			);
-			name = "Development Pods";
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		44360DFF3A55CD80884C8330018BC132 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				38F7D1BCA6952BAE72C801C2B7CB77CF /* SimpleCardView-SwiftUI.modulemap */,
+				722A9E92A11FC18A98456F5FDDBDD051 /* SimpleCardView-SwiftUI-dummy.m */,
+				4AD7BE4259B3EDFB3B77FC307BDD3B57 /* SimpleCardView-SwiftUI-Info.plist */,
+				9B5C4882AAF583A161B043ABC60E3EA4 /* SimpleCardView-SwiftUI-prefix.pch */,
+				1D6CCC8B5F2D158C1D8A684E963DC663 /* SimpleCardView-SwiftUI-umbrella.h */,
+				452D919346CE2CD6D05166A19BE370B3 /* SimpleCardView-SwiftUI.debug.xcconfig */,
+				37A74E2B0E454EAC658FA2B73652650A /* SimpleCardView-SwiftUI.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SimpleCardView-SwiftUI";
+			sourceTree = "<group>";
+		};
+		48B91A8BE9B2347F9B739B4662B9BBF3 /* SimpleCardView-SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				15B7990FDDF9E8D745AC34E1BFBA8272 /* CardBackgroundView.swift */,
+				F502C5F8C278222F0F95CA1057FE5B36 /* CardDetailsView.swift */,
+				1F78D2161AAE9ACA62AA65852B1911D3 /* CardTitleView.swift */,
+				BC2B9F20350F2FF59454D6739BB3C4C1 /* CardView.swift */,
+				3FDA1421230557C16806E7BE652B5230 /* Pod */,
+				44360DFF3A55CD80884C8330018BC132 /* Support Files */,
+			);
+			name = "SimpleCardView-SwiftUI";
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		6ADF94D580D208CE69822CE9DBB8AFBF /* Products */ = {
@@ -149,48 +184,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		796B568186DCDCC385F1BCF52814D6B1 /* Pod */ = {
+		9127BDDCB197B37E281DE42DE9183676 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AC94979E5912F4A9B6E0CACC71CA497C /* LICENSE */,
-				A3090968EDFAF10B28B0392DA6142821 /* README.md */,
-				D556363ABD1F15917C7F20F0DDE7D5CB /* SimpleCardView-SwiftUI.podspec */,
+				48B91A8BE9B2347F9B739B4662B9BBF3 /* SimpleCardView-SwiftUI */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		8DE094DEB281605CD32D570C65BC2E89 /* SimpleCardView-SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				AB932B860DD2D64BE779E4267E7E0708 /* CardDetailsView.swift */,
-				7BEBBEF7A3FD0324F66FC98D8E574383 /* CardView.swift */,
-				796B568186DCDCC385F1BCF52814D6B1 /* Pod */,
-				C79FCA7D072E39BEBDAB31C910B84486 /* Support Files */,
-			);
-			name = "SimpleCardView-SwiftUI";
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		C79FCA7D072E39BEBDAB31C910B84486 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BB74EFB06785B3DCC992600A90B90C2E /* SimpleCardView-SwiftUI.modulemap */,
-				22C63828A7A7950BD667C4492B83732D /* SimpleCardView-SwiftUI-dummy.m */,
-				27551CBCDC8D2E9062C242C8BA1DBBD0 /* SimpleCardView-SwiftUI-Info.plist */,
-				0FB818896F2B8C10D05712015E1FF086 /* SimpleCardView-SwiftUI-prefix.pch */,
-				5456AA8DF1FDD1B38AE3CAB8EAFD0B8C /* SimpleCardView-SwiftUI-umbrella.h */,
-				84E6911DF8A96C9B48DC6AF5DE9109C3 /* SimpleCardView-SwiftUI.debug.xcconfig */,
-				C6FF9A08C466CB4BC8D6E7B04DB8B89D /* SimpleCardView-SwiftUI.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SimpleCardView-SwiftUI";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				460137630D1C3B999DB0B52792BD403E /* Development Pods */,
+				9127BDDCB197B37E281DE42DE9183676 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				6ADF94D580D208CE69822CE9DBB8AFBF /* Products */,
 				3D5709378EABFC60B39266DCE7B2F63F /* Targets Support Files */,
@@ -241,11 +247,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BBE3A28D673DFC053D3117ED2BFE8DF /* Headers */ = {
+		5356ED153122E3B87DAF4CC640E74BE4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9D0E6FC3CF8C23AB5E3026187CD1B10 /* SimpleCardView-SwiftUI-umbrella.h in Headers */,
+				BC73A8D702BE6AD341626D3E5000FB1C /* SimpleCardView-SwiftUI-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,12 +268,12 @@
 /* Begin PBXNativeTarget section */
 		02F107C719FC3701D3016D8022DCD296 /* SimpleCardView-SwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BCDBD1B17FC40F982D2AB131CB834AC /* Build configuration list for PBXNativeTarget "SimpleCardView-SwiftUI" */;
+			buildConfigurationList = A4E729867AE8F60788F8336B7A3DB95D /* Build configuration list for PBXNativeTarget "SimpleCardView-SwiftUI" */;
 			buildPhases = (
-				7BBE3A28D673DFC053D3117ED2BFE8DF /* Headers */,
-				F573E8BE0A3F50706E6E15F137E05E15 /* Sources */,
-				8FC315781F7BA1064AC91CE16A63FE0E /* Frameworks */,
-				AD74799C49A44B673B4F230DB70228A8 /* Resources */,
+				5356ED153122E3B87DAF4CC640E74BE4 /* Headers */,
+				DD7CB52CC49E66DA67C177C188060719 /* Sources */,
+				9B56A24B7681B65901ACB73B03529525 /* Frameworks */,
+				D9081FA1E70D76256E2C033085DC18A0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -290,7 +296,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				57F1D1B022E2769CEF1CD67363038BC4 /* PBXTargetDependency */,
+				27C7B9681217562CD2AFFD0D67AD2939 /* PBXTargetDependency */,
 			);
 			name = "Pods-SimpleCardView-SwiftUI_Tests";
 			productName = Pods_SimpleCardView_SwiftUI_Tests;
@@ -309,7 +315,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C61B2941FD95BB7F48A1840D61C54BA7 /* PBXTargetDependency */,
+				37707BD136D995B5611CC8E091B80BB7 /* PBXTargetDependency */,
 			);
 			name = "Pods-SimpleCardView-SwiftUI_Example";
 			productName = Pods_SimpleCardView_SwiftUI_Example;
@@ -360,7 +366,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD74799C49A44B673B4F230DB70228A8 /* Resources */ = {
+		D9081FA1E70D76256E2C033085DC18A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,6 +384,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD7CB52CC49E66DA67C177C188060719 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496EF7ED333C4D1799B891C7DCB7D134 /* CardBackgroundView.swift in Sources */,
+				06C890A7EAB7BBC9C500CC253EA87246 /* CardDetailsView.swift in Sources */,
+				C8B4B631021B0CFCE8B66E11C9B7B2B7 /* CardTitleView.swift in Sources */,
+				908AF4D88F94097C195EC28516913A38 /* CardView.swift in Sources */,
+				048AEAF1F1E6E7359DD15586601E5881 /* SimpleCardView-SwiftUI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F18C5E6E300FB3999687FD846E906AE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,30 +404,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F573E8BE0A3F50706E6E15F137E05E15 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				613D421349DF2BFFA3B063940383C84C /* CardDetailsView.swift in Sources */,
-				D94C1442A962EC324D4F5764DA1B3456 /* CardView.swift in Sources */,
-				DD167F61017A0614F65DF1E8ABAFFB4C /* SimpleCardView-SwiftUI-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		57F1D1B022E2769CEF1CD67363038BC4 /* PBXTargetDependency */ = {
+		27C7B9681217562CD2AFFD0D67AD2939 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SimpleCardView-SwiftUI_Example";
 			target = C161E6E687B2DEDE31BEA2971B4F60FF /* Pods-SimpleCardView-SwiftUI_Example */;
-			targetProxy = B0FA4F3BF6A9F7799F9179070DB1062C /* PBXContainerItemProxy */;
+			targetProxy = E87F51AC51BE03DF8D451B6AE0A1D6D9 /* PBXContainerItemProxy */;
 		};
-		C61B2941FD95BB7F48A1840D61C54BA7 /* PBXTargetDependency */ = {
+		37707BD136D995B5611CC8E091B80BB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SimpleCardView-SwiftUI";
 			target = 02F107C719FC3701D3016D8022DCD296 /* SimpleCardView-SwiftUI */;
-			targetProxy = 6937B1A08A8D6A965B1EDA2F389997A3 /* PBXContainerItemProxy */;
+			targetProxy = 8B4B9D9CAA7EF915DFF728F08A6F2640 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -480,38 +488,6 @@
 			};
 			name = Debug;
 		};
-		27E21369955975BB18EE17A17C1CB6EC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6FF9A08C466CB4BC8D6E7B04DB8B89D /* SimpleCardView-SwiftUI.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI.modulemap";
-				PRODUCT_MODULE_NAME = SimpleCardView_SwiftUI;
-				PRODUCT_NAME = SimpleCardView_SwiftUI;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.6;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		36693A6F11CF6DF216803545FBE15A7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09F42D4742385457F2B94679DFCA1D90 /* Pods-SimpleCardView-SwiftUI_Tests.debug.xcconfig */;
@@ -577,37 +553,6 @@
 			};
 			name = Release;
 		};
-		5EC24817091951A6CA3DD625887301D2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84E6911DF8A96C9B48DC6AF5DE9109C3 /* SimpleCardView-SwiftUI.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI.modulemap";
-				PRODUCT_MODULE_NAME = SimpleCardView_SwiftUI;
-				PRODUCT_NAME = SimpleCardView_SwiftUI;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.6;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		77AE44C5854A1067FA507D824B85C1B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34F2B37487EC583275A82BD99CEB36FB /* Pods-SimpleCardView-SwiftUI_Tests.release.xcconfig */;
@@ -634,6 +579,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9BFB66EB5F2061C8584A4AA60091C0C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37A74E2B0E454EAC658FA2B73652650A /* SimpleCardView-SwiftUI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI.modulemap";
+				PRODUCT_MODULE_NAME = SimpleCardView_SwiftUI;
+				PRODUCT_NAME = SimpleCardView_SwiftUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.6;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -735,6 +712,37 @@
 			};
 			name = Debug;
 		};
+		EEC45186755C41BF9BFCE46CF19B7BFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452D919346CE2CD6D05166A19BE370B3 /* SimpleCardView-SwiftUI.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleCardView-SwiftUI/SimpleCardView-SwiftUI.modulemap";
+				PRODUCT_MODULE_NAME = SimpleCardView_SwiftUI;
+				PRODUCT_NAME = SimpleCardView_SwiftUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.6;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -765,11 +773,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BCDBD1B17FC40F982D2AB131CB834AC /* Build configuration list for PBXNativeTarget "SimpleCardView-SwiftUI" */ = {
+		A4E729867AE8F60788F8336B7A3DB95D /* Build configuration list for PBXNativeTarget "SimpleCardView-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EC24817091951A6CA3DD625887301D2 /* Debug */,
-				27E21369955975BB18EE17A17C1CB6EC /* Release */,
+				EEC45186755C41BF9BFCE46CF19B7BFD /* Debug */,
+				9BFB66EB5F2061C8584A4AA60091C0C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

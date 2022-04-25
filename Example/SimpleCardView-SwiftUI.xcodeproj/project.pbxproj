@@ -10,6 +10,8 @@
 		02F662E48C52E332FDCAB728 /* Pods_SimpleCardView_SwiftUI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7188A75FE7C2E9233DAA84 /* Pods_SimpleCardView_SwiftUI_Example.framework */; };
 		0D99BDC528142E0900C267A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D99BDC328142E0900C267A9 /* ContentView.swift */; };
 		0D99BDC628142E0900C267A9 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D99BDC428142E0900C267A9 /* ExampleApp.swift */; };
+		0DB3C04A2815A22A0020D324 /* CompleteExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB3C0492815A22A0020D324 /* CompleteExample.swift */; };
+		0DB3C04C2815A2960020D324 /* SimpleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB3C04B2815A2960020D324 /* SimpleExample.swift */; };
 		147AA45AE8C1E2DAC12A8F94 /* Pods_SimpleCardView_SwiftUI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C448E63DD51A421CD056A01 /* Pods_SimpleCardView_SwiftUI_Tests.framework */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -30,6 +32,8 @@
 		0D99BDC228142E0900C267A9 /* SimpleCardView-SwiftUI_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleCardView-SwiftUI_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		0D99BDC328142E0900C267A9 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0D99BDC428142E0900C267A9 /* ExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
+		0DB3C0492815A22A0020D324 /* CompleteExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteExample.swift; sourceTree = "<group>"; };
+		0DB3C04B2815A2960020D324 /* SimpleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleExample.swift; sourceTree = "<group>"; };
 		2ED1A5F9F4DCF301C8799856 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3C448E63DD51A421CD056A01 /* Pods_SimpleCardView_SwiftUI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleCardView_SwiftUI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B45A6D00FA30663007708E /* Pods-SimpleCardView-SwiftUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleCardView-SwiftUI_Example.release.xcconfig"; path = "Target Support Files/Pods-SimpleCardView-SwiftUI_Example/Pods-SimpleCardView-SwiftUI_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		607FACD21AFB9204008FA782 /* Example for SimpleCardView-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0DB3C0492815A22A0020D324 /* CompleteExample.swift */,
+				0DB3C04B2815A2960020D324 /* SimpleExample.swift */,
 				0D99BDC328142E0900C267A9 /* ContentView.swift */,
 				0D99BDC428142E0900C267A9 /* ExampleApp.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -216,7 +222,7 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = SJ84SX66Q7;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1330;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -329,6 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB3C04C2815A2960020D324 /* SimpleExample.swift in Sources */,
+				0DB3C04A2815A22A0020D324 /* CompleteExample.swift in Sources */,
 				0D99BDC628142E0900C267A9 /* ExampleApp.swift in Sources */,
 				0D99BDC528142E0900C267A9 /* ContentView.swift in Sources */,
 			);
@@ -479,7 +487,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "SimpleCardView-SwiftUI/SimpleCardView-SwiftUI_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -498,7 +506,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SimpleCardView-SwiftUI/SimpleCardView-SwiftUI_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -521,7 +529,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleCardView-SwiftUI_Example.app/SimpleCardView-SwiftUI_Example";
 			};
 			name = Debug;
@@ -541,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleCardView-SwiftUI_Example.app/SimpleCardView-SwiftUI_Example";
 			};
 			name = Release;

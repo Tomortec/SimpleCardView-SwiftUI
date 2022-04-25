@@ -10,13 +10,19 @@ import SwiftUI
 
 struct CardDetailsView<V: View>: View {
     let content: V
+    let displayType: CardDetailsViewType
     
     @Binding var isShowingDetailsView: Bool
     
     @State var xOffset = 0.0
     @State var yOffset = 0.0
     
-    init(flag isShowingDetailsView: Binding<Bool>, @ViewBuilder _ content: () -> V) {
+    init(
+        displayType: CardDetailsViewType,
+        flag isShowingDetailsView: Binding<Bool>,
+        @ViewBuilder _ content: () -> V
+    ) {
+        self.displayType = displayType
         self.content = content()
         self._isShowingDetailsView = isShowingDetailsView
     }
@@ -29,21 +35,35 @@ struct CardDetailsView<V: View>: View {
         .ignoresSafeArea()
         .offset(x: xOffset, y: yOffset)
         .gesture(DragGesture(minimumDistance: 50.0, coordinateSpace: .global).onChanged({
-            // 0.01 is a factor preventing strong effect
-            //
-            // For this version, the `.fullScreenCover` only supports entering from bottom,
-            // therefore, for consistency, the view may have to react to vertical actions
-            yOffset += $0.translation.height * 0.01
-        }).onEnded {
-            if $0.translation.height > 100.0 {
-                // dismiss
-                isShowingDetailsView = false
+            switch displayType {
+            case .fullScreen:
+                
+                // 0.01 is a factor preventing strong effect
+                //
+                // For this version, the `.fullScreenCover` only supports entering from bottom,
+                // therefore, for consistency, the view may have to react to vertical actions
+                yOffset += $0.translation.height * 0.01
+                
+            default:
+                break
             }
-            
-            // reset yOffset to prevent hanging it in the air
-            //
-            // use Timer to prevent shaking
-            Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in self.yOffset = 0.0 }
+        }).onEnded {
+            switch displayType {
+            case .fullScreen:
+                
+                if $0.translation.height > 100.0 {
+                    // dismiss
+                    isShowingDetailsView = false
+                }
+                
+                // reset yOffset to prevent hanging it in the air
+                //
+                // use Timer to prevent shaking
+                Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in self.yOffset = 0.0 }
+                
+            default:
+                break
+            }
         })
     }
 }

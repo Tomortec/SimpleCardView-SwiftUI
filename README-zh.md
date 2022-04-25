@@ -4,17 +4,15 @@
 [![License](https://img.shields.io/cocoapods/l/SimpleCardView-SwiftUI.svg?style=flat)](https://cocoapods.org/pods/SimpleCardView-SwiftUI)
 [![Platform](https://img.shields.io/cocoapods/p/SimpleCardView-SwiftUI.svg?style=flat)](https://cocoapods.org/pods/SimpleCardView-SwiftUI)
 
-`SimpleCardView-SwiftUI` is a very simple card view written with SwiftUI
-
-[中文说明](./README-zh.md)
+`SimpleCardView-SwiftUI` 是用 SwiftUI 写的小卡片视图
 
 ![ScreenShot](./screenshot.png)
 ![Demo](./demo.gif)
 
-## CardView structure
+## CardView 的结构
 ![Structure](./pic-structure.png)
 
-## Example
+## 小示例
 
 ``` Swift
 CardView(
@@ -43,79 +41,78 @@ CardView(
 .backgroundColor(colors: [.cyan, .blue])
 ```
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+克隆本仓库，在 `Example` 文件夹执行 `pod install` 后在 `Xcode` 运行示例项目来查看 demo
 
-## Interfaces
+## 接口
 
-### Initialization
+### 初始化
 ```swift 
 init(
     size: CGSize, 
     title: String, 
-    titleViewProportion: CGFloat = 1 / 4, // the proportion (of height) of the title view
+    titleViewProportion: CGFloat = 1 / 4, // TitleView 的高占 卡片的高 的比例
     spacing: CGFloat = 0.0, 
-    detailViewType: CardDetailsViewType = .sheet, // how the detail view will display
+    detailViewType: CardDetailsViewType = .sheet, // DetailView 展示的样式
     cover: () -> Cover, 
     detail: () -> Detail, 
     onTap action: (() -> ())? = nil
 )
 ```
 
-### Methods for `BackgroundView`
+### `BackgroundView` 的方法
 ``` swift
-// Set the background color of the card
+// 设置背景颜色
 func backgroundColor(_ color: Color) 
 
-// Set the background color of the card as linear gradient
+// 设置背景的线性渐变颜色
 func backgroundColor(colors: [Color], startPoint: UnitPoint = .top, endPoint: UnitPoint = .bottom) 
 
-// Set the corner radius of the card
+// 设置卡片圆角
 func cardCornerRadius(_ radius: CGFloat)
 
-// Set the shadow of the card
+// 设置卡片阴影
 func cardShadow(color: Color? = nil, radius: CGFloat, xOffset: CGFloat? = nil, yOffset: CGFloat? = nil)
 ```
 
-### Methods for `TitleView`
+### `TitleView` 的方法
 ```swift
-// Replace the default title view with a new `AnyView`
+// 用 `AnyView` 替换 TitleView
 func replaceTitleView(with alternativeView: AnyView)
 
-// Set the title string of the title view
+// 设置标题
 func title(_ title: String)
 
-// Set the font of the title
+// 设置标题字体
 func titleFont(_ font: Font)
 
-// Set the text color of the title
+// 设置标题文本颜色
 func titleColor(_ color: Color)
 
-// Set the alignment of the title
+// 设置标题对齐方式
 func titleAlignment(_ alignment: HorizontalAlignment)
 
-// Set the truncation mode of the title
+// 设置标题截取方式
 func titleTruncationMode(_ mode: Text.TruncationMode)
 ```
 
-Execute Xcode's `Product > Build Documentation` and go to `SimpleCardView-SwiftUI`'s documentation for more details.
+执行 Xcode 的 `Product > Build Documentation` 并前往文档中心来查看 `SimpleCardView-SwiftUI` 的更多接口细节
 
-## Requirements
+## Swift 版本
 
 Swift >= 5.0
 
-## Installation
+## 安装方法
 
-SimpleCardView-SwiftUI is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+`SimpleCardView-SwiftUI` 已在 [CocoaPods](https://cocoapods.org)发布。添加下列命令到你的 `Podfile` 来安装 `SimpleCardView-SwiftUI`:
 
 ```ruby
 pod 'SimpleCardView-SwiftUI'
 
-# Note that if you are installing 0.0.2 version, please try the command below
+# 注意：如果您下载的是 0.0.2 版本, 请使用下面的命令重试
 # pod 'SimpleCardView-SwiftUI', :git => 'https://github.com/Tomortec/SimpleCardView-SwiftUI.git'
 ```
 
-## Author
+## 作者
 
 Tomortec, everything@tomortec.com
 

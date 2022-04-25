@@ -1,5 +1,5 @@
 PODS:
-  - SimpleCardView-SwiftUI (0.0.1)
+  - SimpleCardView-SwiftUI (0.0.3)
 
 DEPENDENCIES:
   - SimpleCardView-SwiftUI (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SimpleCardView-SwiftUI: 9a75f477b5cf6c864625546fa3085f9728205459
+  SimpleCardView-SwiftUI: 3d5556852eb6a5ba5f1adb53db05a65ab44810c7
 
 PODFILE CHECKSUM: 734a16e084b296ceb52dbc3101dc174abab07be9
 

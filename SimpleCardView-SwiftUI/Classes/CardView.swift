@@ -8,42 +8,108 @@
 
 import SwiftUI
 
+/* MARK: - Detail View Type */
+/// Defines how the Detail view will display
+public enum CardDetailsViewType {
+    case fullScreen
+    /// default value is `popover(anchor: PopoverAttachmentAnchor = .rect(.bounds), arrowEdge: Edge = .top)`
+    ///
+    /// - note: the popover will be shown as `.sheet` on iPhones
+    case popover(anchor: PopoverAttachmentAnchor = .rect(.bounds), arrowEdge: Edge = .top)
+    /// Default
+    case sheet
+}
+
+/**
+ CardView with TitleView, Cover view and Detail view
+ 
+ Simple Example:
+ ``` swift
+ CardView(
+     size: CGSize(width: 150.0, height: 200.0),
+     title: "Hello World",
+     cover: {
+         // place any view here to provide a cover
+         Image(systemName: "leaf.fill")
+             .resizable()
+             .foregroundColor(.white)
+             .frame(width: 100.0, height: 100.0)
+     }, detail: {
+         // place any view here to provide a detail view
+         // which will display when the card is tapped
+         Image(systemName: "moon.stars.fill")
+             .resizable()
+             .scaledToFit()
+             .padding()
+             .foregroundColor(.yellow)
+             .frame(maxWidth: .infinity, maxHeight: .infinity)
+             .background(.cyan)
+ })
+ .backgroundColor(top: .cyan, bottom: .blue)
+ ```
+ */
 public struct CardView<Cover: View, Detail: View>: View {
+    
+    let detailViewType: CardDetailsViewType
+    
+    /* MARK: - Constraints */
     let size: CGSize
-    let title: String
-    let proportion: CGFloat
+    let titleViewProportion: CGFloat
     let spacing: CGFloat
-    let titleFont: Font
-    let backgroundColorTop: Color
-    let backgroundColorBottom: Color
-    let foregroundColor: Color
+    
+    /* MARK: - Private Components */
+    var titleView: CardTitleView
+    var backgroundView: CardBackgroundView
+    
+    /* MARK: - Exposed Components */
     let cover: Cover
     let detail: Detail
+    
+    /* MARK: - Handlers */
     let action: (() -> ())?
     
-    @State var isShowingDetailsView = false
+    /* MARK: - State */
+    @State var isShowingDetailsViewAsFullScreen = false
+    @State var isShowingDetailsViewAsPopover = false
+    @State var isShowingDetailsViewAsSheet = false
     
+    /* MARK: - Requirements */
+    
+    /**
+     Construct a CardView with must-have paras: `size`, `title`, `cover` and `detail`
+     
+     - parameters:
+        - size: defines the size of the card. Required
+        - title: the text shown on the top of the card. Note that this parameter makes no sense when `.replaceTitleView(with:)` is called. Required
+        - titleViewProportion: determines the proportion (of height) of the title view. For example, if this parameters is set to `1 / 4`, the title view's height will be 1/4 of that of the card's while the cover view will be 3/4. Default is `1 / 4`
+        - spacing: the space between the title view and the cover view. Default is `0.0`
+        - detailViewType: determines how the detail view will display. Possible values include `.fullScreen`, `.sheet` and `.popover()`. Default is `.sheet`
+        - cover: the cover view. Required
+        - detail: the view displaying after the card is tapped. Required
+        - onTap: the action to do when the card is tapped. Default is `nil`
+     
+     - note: `title` parameter makes no sense when `.replaceTitleView(with:)` is called
+     - note: the `.popover()` type of `detailViewType` will display as `.sheet` on iPhone.
+     */
     public init(
         size: CGSize,
         title: String,
-        proportion: CGFloat = 1 / 4,
+        titleViewProportion: CGFloat = 1 / 4,
         spacing: CGFloat = 0.0,
-        titleFont: Font = .title3.bold(),
-        backgroundColorTop: Color,
-        backgroundColorBottom: Color,
-        foregroundColor: Color = .white,
+        detailViewType: CardDetailsViewType = .sheet,
+        
         @ViewBuilder cover: () -> Cover,
         @ViewBuilder detail: () -> Detail,
-        action: (() -> ())? = nil
+        onTap action: (() -> ())? = nil
     ) {
         self.size = size
-        self.title = title
-        self.proportion = proportion
+        self.titleViewProportion = titleViewProportion
         self.spacing = spacing
-        self.titleFont = titleFont
-        self.backgroundColorTop = backgroundColorTop
-        self.backgroundColorBottom = backgroundColorBottom
-        self.foregroundColor = foregroundColor
+        self.detailViewType = detailViewType
+        
+        self.titleView = CardTitleView(title: title)
+        self.backgroundView = CardBackgroundView(backgroundColor: .blue)
+        
         self.cover = cover()
         self.detail = detail()
         self.action = action
@@ -51,28 +117,156 @@ public struct CardView<Cover: View, Detail: View>: View {
     
     public var body: some View {
         VStack(alignment: .center, spacing: spacing) {
-            Text(title)
-                .font(titleFont)
-                .frame(height: proportion * size.height)
+            titleView
+                .frame(height: titleViewProportion * size.height)
             
             cover
-                .frame(height: (1 - proportion) * size.height)
+                .frame(height: (1 - titleViewProportion) * size.height)
         }
         .frame(width: size.width, height: size.height)
-        .foregroundColor(foregroundColor)
         .background(
-            RoundedRectangle(cornerRadius: 12.0)
-                .fill(LinearGradient(colors: [backgroundColorTop, backgroundColorBottom], startPoint: .top, endPoint: .bottom))
-                .shadow(color: .gray, radius: 12.0, x: 0.0, y: 0.0)
+            backgroundView
         )
-        .fullScreenCover(isPresented: $isShowingDetailsView) {
-            CardDetailsView(flag: $isShowingDetailsView) {
+        .fullScreenCover(isPresented: $isShowingDetailsViewAsFullScreen) {
+            CardDetailsView(displayType: detailViewType, flag: $isShowingDetailsViewAsFullScreen) {
+                detail
+            }
+        }
+        .sheet(isPresented: $isShowingDetailsViewAsPopover) {
+            CardDetailsView(displayType: detailViewType, flag: $isShowingDetailsViewAsPopover) {
+                detail
+            }
+        }
+        .popover(isPresented: $isShowingDetailsViewAsSheet) {
+            CardDetailsView(displayType: detailViewType, flag: $isShowingDetailsViewAsSheet) {
                 detail
             }
         }
         .onTapGesture {
-            isShowingDetailsView = true
+            switch detailViewType {
+            case .fullScreen:
+                isShowingDetailsViewAsFullScreen = true
+            case .popover:
+                isShowingDetailsViewAsPopover = true
+            case .sheet:
+                isShowingDetailsViewAsSheet = true
+            }
             action?()
         }
+    }
+}
+
+/* MARK: - Config for BackgroundView */
+extension CardView {
+    /// Set the background color of the card
+    ///
+    /// Originally, the card's background is set to `Color.blue`
+    public func backgroundColor(_ color: Color) -> Self {
+        var copied = self
+        copied.backgroundView = backgroundView.backgroundColor(color)
+        return copied
+    }
+    
+    /// Set the background color of the card as linear gradient
+    ///
+    /// Originally, the card's background is set to `Color.blue`
+    ///
+    /// - note: the same syntax as `LinearGradient(colors:startPoint:endPoint:)`
+    public func backgroundColor(colors: [Color], startPoint: UnitPoint = .top, endPoint: UnitPoint = .bottom) -> Self {
+        var copied = self
+        copied.backgroundView = backgroundView.backgroundColor(colors: colors, startPoint: startPoint, endPoint: endPoint)
+        return copied
+    }
+    
+    /// Set the corner radius of the card
+    ///
+    /// Originally, the card's corner radius is set to `12.0`
+    public func cardCornerRadius(_ radius: CGFloat) -> Self {
+        var copied = self
+        copied.backgroundView = backgroundView.cardCornerRadius(radius)
+        return copied
+    }
+    
+    /// Set the shadow of the card
+    ///
+    /// Originally, the card's shadow is set to `color: .gray, radius: 12.0, xOffset: 0.0, yOffset: 0.0`
+    public func cardShadow(
+        color: Color? = nil,
+        radius: CGFloat,
+        xOffset: CGFloat? = nil,
+        yOffset: CGFloat? = nil
+    ) -> CardView {
+        var copied = self
+        copied.backgroundView = backgroundView.cardShadow(radius: radius, color: color, xOffset: xOffset, yOffset: yOffset)
+        return copied
+    }
+}
+
+/* MARK: - Cofig for TitleView */
+extension CardView {
+    /// Replace the default title view with a new `AnyView`
+    ///
+    /// Example:
+    /// ``` swift
+    /// // use `AnyView(_:)` to wrap the new view
+    /// .replaceTitleView(with: AnyView(
+    ///     HStack {
+    ///         Image(systemName: "heart")
+    ///         Text("AnyView")
+    ///     }
+    /// ))
+    /// ```
+    ///
+    /// - attention: the `title` property of the card will be erased after this method is called
+    ///
+    public func replaceTitleView(with alternativeView: AnyView) -> Self {
+        var copied = self
+        copied.titleView = titleView.replaceTitleView(with: alternativeView)
+        return copied
+    }
+    
+    /// Set the title string of the title view
+    ///
+    /// - attention: calling this method will hide the view you create with `.replaceTitle(with:)`
+    public func title(_ title: String) -> Self {
+        var copied = self
+        copied.titleView = titleView.title(title)
+        return copied
+    }
+    
+    /// Set the font of the title
+    ///
+    /// Originally, the font is set to `Font.title3().bold()`
+    public func titleFont(_ font: Font) -> Self {
+        var copied = self
+        copied.titleView = titleView.titleFont(font)
+        return copied
+    }
+    
+    /// Set the text color of the title
+    ///
+    /// Originally, the color is set to `Color.white`
+    public func titleColor(_ color: Color) -> Self {
+        var copied = self
+        copied.titleView = titleView.titleColor(color)
+        return copied
+    }
+    
+    /// Set the alignment of the title
+    ///
+    /// Originally, the alignment is set to `.center`
+    public func titleAlignment(_ alignment: HorizontalAlignment) -> Self {
+        var copied = self
+        copied.titleView = titleView.titleAlignment(Alignment(horizontal: alignment, vertical: .center))
+        return copied
+    }
+    
+    /// Set the truncation mode of the title
+    ///
+    /// Originally, the truncation mode is set to `.tail`
+    public func titleTruncationMode(_ mode: Text.TruncationMode) -> Self {
+        var copied = self
+        copied.titleView = titleView.titleTruncationMode(mode)
+        return copied
     }
 }

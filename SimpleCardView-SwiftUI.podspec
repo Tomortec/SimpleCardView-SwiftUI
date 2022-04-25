@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleCardView-SwiftUI'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'SimpleCardView-SwiftUI is a very simple card view written with SwiftUI'
 
 # This description is used to generate tags and improve search results.
@@ -24,11 +24,10 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://tomortec.com'
-  #  s.screenshots      = './screenshot.png'
+  s.screenshots      = './screenshot.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Tomortec' => 'everything@tomortec.com' }
   s.source           = { :git => 'https://github.com/Tomortec/SimpleCardView-SwiftUI.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.swift_version = '5.6'
   s.ios.deployment_target = '15.0'
@@ -41,5 +40,4 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'SwiftUI'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
