@@ -1,18 +1,15 @@
 # SimpleCardView-SwiftUI
 
-[![Version](https://img.shields.io/cocoapods/v/SimpleCardView-SwiftUI.svg?style=flat)](https://cocoapods.org/pods/SimpleCardView-SwiftUI)
-[![License](https://img.shields.io/cocoapods/l/SimpleCardView-SwiftUI.svg?style=flat)](https://cocoapods.org/pods/SimpleCardView-SwiftUI)
-[![Platform](https://img.shields.io/cocoapods/p/SimpleCardView-SwiftUI.svg?style=flat)](https://cocoapods.org/pods/SimpleCardView-SwiftUI)
+<img src="./screenshot.png" alt="Banner" width="400">
 
 `SimpleCardView-SwiftUI` is a very simple card view written with SwiftUI
 
 [中文说明](./README-zh.md)
 
-![ScreenShot](./screenshot.png)
-![Demo](./demo.gif)
+<img src="./demo.gif" alt="Demo" width="200">
 
 ## CardView structure
-![Structure](./pic-structure.png)
+<img src="./pic-structure.png" alt="Structure" width="400">
 
 ## Example
 
